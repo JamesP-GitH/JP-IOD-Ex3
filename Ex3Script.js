@@ -1,20 +1,20 @@
 function changeHeading(columnID, headingID) {
 
     //colors of rainbow defined in array
-    const colorsList = ['red','orange','yellow','green','blue','purple','violet'];
+    const colorsList = ['Red','Orange','Yellow','Green','Blue','Purple','Violet'];
     let element = document.getElementById(columnID);
     let heading = document.getElementById(headingID);
     let bgColor = window.getComputedStyle(element).backgroundColor;
 
     //list rgb values of rainbow to colour's name
     const rgbToColorName = {
-        "rgb(255, 0, 0)": "red",
-        "rgb(255, 165, 0)": "orange",
-        "rgb(255, 255, 0)": "yellow",
-        "rgb(0, 128, 0)": "green",
-        "rgb(0, 0, 255)": "blue",
-        "rgb(128, 0, 128)": "purple",
-        "rgb(238, 130, 238)": "violet"
+        "rgb(255, 0, 0)": "Red",
+        "rgb(255, 165, 0)": "Orange",
+        "rgb(255, 255, 0)": "Yellow",
+        "rgb(0, 128, 0)": "Green",
+        "rgb(0, 0, 255)": "Blue",
+        "rgb(128, 0, 128)": "Purple",
+        "rgb(238, 130, 238)": "Violet"
     };
 
     //use list of rainbow colour's with rgb values to convert to useable name string
@@ -46,7 +46,6 @@ function changeText(textField, headingID) {
     } else {
         element.textContent = inputText;
     }
-    
 }
 
 /* Test case selection 
