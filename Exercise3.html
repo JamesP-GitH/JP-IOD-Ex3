@@ -9,9 +9,46 @@
     <title>Module 1 Exercise 3</title>
 </head>
 
+<!--
+<style>
+    body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    min-height:
+        100vh;
+    align-items: stretch;
+}
+
+.column {
+    background: whitesmoke;
+    display:
+        flex;
+    flex-direction: column;
+    justify-content:
+        center;
+    align-items: center;
+    flex: 1;
+}
+
+.btn {
+    height: 80px;
+    width: 160px;
+    margin-bottom: 20px;
+    color: black;
+    border-color: red;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+</style>
+-->
+
 <body>
     <div class="container">
-        <div class="column" id="column1">            
+        <div class="column" id="column1">
             <img src="./cat.jpg" alt="cat" width="400px">
             <h1 id="heading1">Hello</h1>
             <input type="button" class="btn" value="Change Me!" onclick="changeHeading('column1','heading1')"><br>
@@ -30,4 +67,51 @@
     </div>
 </body>
 
+<!--
+<script>
+    function changeHeading(columnID, headingID) {
+
+        const colorsList = ['red','orange','yellow','green','blue','purple','violet'];
+        let element = document.getElementById(columnID);
+        let heading = document.getElementById(headingID);
+        let bgColor = window.getComputedStyle(element).backgroundColor;
+
+        const rgbToColorName = {
+            "rgb(255, 0, 0)": "red",
+            "rgb(255, 165, 0)": "orange",
+            "rgb(255, 255, 0)": "yellow",
+            "rgb(0, 128, 0)": "green",
+            "rgb(0, 0, 255)": "blue",
+            "rgb(128, 0, 128)": "purple",
+            "rgb(238, 130, 238)": "violet"
+        };
+
+        let currentColorName = rgbToColorName[bgColor] || null;
+        let colorIndex = colorsList.indexOf(currentColorName);
+
+        if (colorIndex === -1){
+            colorIndex = 0;
+        } else {
+            colorIndex = (colorIndex + 1) % colorsList.length;
+        }
+        
+        element.style.backgroundColor = colorsList[colorIndex];
+        heading.textContent = colorsList[colorIndex];
+    }
+
+function changeText(textField, headingID) {
+    
+    let element = document.getElementById(headingID);
+    let inputField = document.getElementById(textField)
+    let inputText = inputField.value;
+
+    if (inputText == ""){
+        element.textContent = "null";
+    } else {
+        element.textContent = inputText;
+    }
+    
+}
+</script>
+-->
 </html>
