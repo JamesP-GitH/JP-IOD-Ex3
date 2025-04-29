@@ -1,5 +1,3 @@
-
-
 function changeHeading(headingID) {
 
     const colorsList = ['red','orange','yellow','green','blue','purple','violet'];
@@ -25,7 +23,17 @@ function changeHeading(headingID) {
         colorIndex = (colorIndex + 1) % colorsList.length;
     }
     
-    element.style.backgroundColor = colorsList[colorIndex]
+    element.style.backgroundColor = colorsList[colorIndex];
+    element.textContent = colorsList[colorIndex];
+}
+
+function changeText(textField, headingID) {
+    
+    let element = document.getElementById(headingID);
+    let inputField = document.getElementById(textField)
+    let inputText = inputField.value;
+
+    element.textContent = inputText;
 }
 
 /* switch (bgColor){
