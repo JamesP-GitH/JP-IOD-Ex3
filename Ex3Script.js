@@ -1,0 +1,56 @@
+
+
+function changeHeading(headingID) {
+
+    const colorsList = ['red','orange','yellow','green','blue','purple','violet'];
+    let element = document.getElementById(headingID);
+    let bgColor = window.getComputedStyle(element).backgroundColor;
+
+    const rgbToColorName = {
+        "rgb(255, 0, 0)": "red",
+        "rgb(255, 165, 0)": "orange",
+        "rgb(255, 255, 0)": "yellow",
+        "rgb(0, 128, 0)": "green",
+        "rgb(0, 0, 255)": "blue",
+        "rgb(128, 0, 128)": "purple",
+        "rgb(238, 130, 238)": "violet"
+    };
+
+    let currentColorName = rgbToColorName[bgColor] || null;
+    let colorIndex = colorsList.indexOf(currentColorName);
+
+    if (colorIndex === -1){
+        colorIndex = 0;
+    } else {
+        colorIndex = (colorIndex + 1) % colorsList.length;
+    }
+    
+    element.style.backgroundColor = colorsList[colorIndex]
+}
+
+/* switch (bgColor){
+    case red:
+        document.getElementById(headingID).style.backgroundColor = "orange";
+        break;
+    case orange:
+        document.getElementById(headingID).style.backgroundColor = "yellow";
+        break;
+    case yellow:
+        document.getElementById(headingID).style.backgroundColor = "green";
+        break;
+    case green:
+        document.getElementById(headingID).style.backgroundColor = "blue";
+        break;
+    case blue:
+        document.getElementById(headingID).style.backgroundColor = "purple";
+        break;
+    case purple:
+        document.getElementById(headingID).style.backgroundColor = "violet";
+        break;
+    case violet:
+        document.getElementById(headingID).style.backgroundColor = "red";
+        break;
+    default:
+        document.getElementById(headingID).style.backgroundColor = "red";
+        break;
+} */

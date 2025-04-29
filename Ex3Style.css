@@ -11,7 +11,7 @@ body {
 }
 
 .column {
-    background: goldenrod;
+    background: yellow;
     display:
         flex;
     flex-direction: column;
