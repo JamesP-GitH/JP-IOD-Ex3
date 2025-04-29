@@ -13,19 +13,19 @@
     <div class="container">
         <div class="column" id="column1">            
             <img src="./cat.jpg" alt="cat" width="400px">
-            <h1 id="heading1">Hello</h1><br>
-            <input type="button" value="Change Me!" onclick="changeHeading('heading1')"><br>
+            <h1 id="heading1">Hello</h1>
+            <input type="button" class="btn" value="Change Me!" onclick="changeHeading('column1','heading1')"><br>
             <label for="textChange1">Change Text To: </label><br>
             <input type="text" name="textChange1" id="textChange1"><br>
-            <input type="button" value="Change Text" onclick="changeText('textChange1', 'heading1')">
+            <input type="button" class="btn" value="Change Text" onclick="changeText('textChange1', 'heading1')">
         </div>
         <div class="column" id="column2">
             <img src="./dog.jpg" alt="dog" width="400px">
-            <h1 id="heading2">World</h1><br>
-            <input type="button" value="Change Me!" onclick="changeHeading('heading2')"><br>
+            <h1 id="heading2">World</h1>
+            <input type="button" class="btn" value="Change Me!" onclick="changeHeading('column2','heading2')"><br>
             <label for="textChange2">Change Text To: </label><br>
             <input type="text" name="textChange2" id="textChange2"><br>
-            <input type="button" value="Change Text" onclick="changeText('textChange2', 'heading2')">
+            <input type="button" class="btn" value="Change Text" onclick="changeText('textChange2', 'heading2')">
         </div>
     </div>
 </body>

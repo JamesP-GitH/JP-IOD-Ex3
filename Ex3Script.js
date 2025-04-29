@@ -1,7 +1,8 @@
-function changeHeading(headingID) {
+function changeHeading(columnID, headingID) {
 
     const colorsList = ['red','orange','yellow','green','blue','purple','violet'];
-    let element = document.getElementById(headingID);
+    let element = document.getElementById(columnID);
+    let heading = document.getElementById(headingID);
     let bgColor = window.getComputedStyle(element).backgroundColor;
 
     const rgbToColorName = {
@@ -24,7 +25,7 @@ function changeHeading(headingID) {
     }
     
     element.style.backgroundColor = colorsList[colorIndex];
-    element.textContent = colorsList[colorIndex];
+    heading.textContent = colorsList[colorIndex];
 }
 
 function changeText(textField, headingID) {
@@ -33,7 +34,12 @@ function changeText(textField, headingID) {
     let inputField = document.getElementById(textField)
     let inputText = inputField.value;
 
-    element.textContent = inputText;
+    if (inputText == ""){
+        element.textContent = "null";
+    } else {
+        element.textContent = inputText;
+    }
+    
 }
 
 /* switch (bgColor){
